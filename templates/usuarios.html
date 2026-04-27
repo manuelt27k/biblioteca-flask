@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usuarios</title>
+</head>
+<body>
+
+<h1>Listado de Usuarios</h1>
+
+<a href="/">Volver</a>
+<br><br>
+
+<!-- CREATE -->
+<a href="/usuarios/nuevo">➕ Crear usuario</a>
+
+<br><br>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Email</th>
+        <th>Telefono</th>
+        <th>Fecha Registro</th>
+        <th>Acciones</th>
+    </tr>
+
+    {% for u in usuarios %}
+    <tr>
+        <td>{{ u[0] }}</td>
+        <td>{{ u[1] }}</td>
+        <td>{{ u[2] }}</td>
+        <td>{{ u[3] }}</td>
+        <td>{{ u[4] }}</td>
+        <td>{{ u[5] }}</td>
+
+        <!-- UPDATE + DELETE -->
+        <td>
+            <a href="/usuarios/editar/{{ u[0] }}">✏️ Editar</a>
+            |
+            <a href="/usuarios/borrar/{{ u[0] }}"
+               onclick="return confirm('¿Seguro que quieres borrar este usuario?')">
+               🗑 Borrar
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

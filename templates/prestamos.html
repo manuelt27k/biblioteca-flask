@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Prestamos</title></head>
+<body>
+    <h1>Listado de Prestamos</h1>
+    <a href="/">Volver</a>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Usuario</th><th>Libro</th><th>Fecha Prestamo</th><th>Fecha Devolucion</th><th>Estado</th>
+        </tr>
+        {% for p in prestamos %}
+        <tr>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td>{{ p[4] }}</td>
+            <td>{{ p[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

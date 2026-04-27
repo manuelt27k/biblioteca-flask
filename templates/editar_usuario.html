@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Usuario</title>
+</head>
+<body>
+
+<h1>Editar Usuario</h1>
+
+<form method="POST">
+    Nombre:
+    <input type="text" name="nombre" value="{{ usuario[1] }}"><br>
+
+    Apellidos:
+    <input type="text" name="apellidos" value="{{ usuario[2] }}"><br>
+
+    Email:
+    <input type="email" name="email" value="{{ usuario[3] }}"><br>
+
+    Telefono:
+    <input type="text" name="telefono" value="{{ usuario[4] }}"><br><br>
+
+    <button type="submit">Actualizar</button>
+</form>
+
+<a href="/usuarios">Volver</a>
+
+</body>
+</html>

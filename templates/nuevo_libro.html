@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Nuevo Libro</title></head>
+<body>
+
+<h1>Crear Libro</h1>
+
+<a href="/libros">Volver</a>
+
+<form method="POST">
+
+    Título:<br>
+    <input type="text" name="titulo"><br><br>
+
+    ISBN:<br>
+    <input type="text" name="isbn"><br><br>
+
+    Año publicación:<br>
+    <input type="number" name="anio"><br><br>
+
+    Stock:<br>
+    <input type="number" name="stock"><br><br>
+
+    Autor:<br>
+    <select name="autor">
+        {% for a in autores %}
+        <option value="{{ a[0] }}">{{ a[1] }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    Categoría:<br>
+    <select name="categoria">
+        {% for c in categorias %}
+        <option value="{{ c[0] }}">{{ c[1] }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <button type="submit">Guardar</button>
+
+</form>
+
+</body>
+</html>
